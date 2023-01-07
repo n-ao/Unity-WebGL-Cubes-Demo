@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// 立方体の振る舞いクラス
+/// </summary>
 public class Behaviour : MonoBehaviour
 {
 
@@ -32,7 +35,7 @@ public class Behaviour : MonoBehaviour
     [SerializeField] Text _counText;
     #endregion
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         _cubeCount = 1;
@@ -52,9 +55,12 @@ public class Behaviour : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 立方体を生成する
+    /// </summary>
+    /// <param name="num"></param>
     void GenerateCube(int num)
     {
-        // 立方体生成
         for (int y = 0; y < num; y++)
         {
             for (int x = 0; x < num; x++)
