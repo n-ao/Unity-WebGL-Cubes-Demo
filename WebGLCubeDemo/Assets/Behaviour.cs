@@ -10,7 +10,8 @@ public class Behaviour : MonoBehaviour
     /// カメラ
     /// </summary>
     [SerializeField] Camera _sceneCamera;
-    float _cemeraZOAmount = 2.0f;
+    float _cameraZOAmount = 2.0f;
+    
 
     #region Cube
     [SerializeField] GameObject _cubePrefab;
@@ -43,7 +44,7 @@ public class Behaviour : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             _cubeScale++;
-            _sceneCamera.transform.Translate(0, 0, -_cemeraZOAmount);
+            _sceneCamera.transform.Translate(0, 0, -_cameraZOAmount);
             transform.localScale = new Vector3(_cubeScale, _cubeScale, _cubeScale);
             transform.localPosition = new Vector3(0.0f, 10.0f, 0.0f);
 
